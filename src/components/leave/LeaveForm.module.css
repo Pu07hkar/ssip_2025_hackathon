@@ -1,0 +1,79 @@
+.leaveForm {
+  max-width: 100%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: 500;
+  color: #34495e;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select,
+textarea,
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #7dbce7;
+  color: rgb(30, 27, 27);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #217dbb;
+}
+
+/* Leave Requests Section */
+/* Leave Requests Table */
+.leaveTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.leaveTable th, .leaveTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #f0f0f0; /* Softer color */
+  color: #333; /* Darker text */
+}
+
+.leaveTable th {
+  background: #accfe6;
+  color: rgb(28, 25, 25);
+  font-weight: 600;
+}
+
+.leaveTable tr:last-child td {
+  border-bottom: none;
+}
+

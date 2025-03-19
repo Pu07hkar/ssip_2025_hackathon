@@ -1,0 +1,84 @@
+.leaveRequests {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.leaveTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.leaveTable th, 
+.leaveTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #343a40;
+}
+
+.leaveTable th {
+    background: #e9eef5;
+    color: #212529;
+    font-weight: 600;
+}
+
+.leaveTable tr:nth-child(even) {
+    background-color: #f8f9fc;
+}
+
+.leaveTable tr:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+/* Status Colors */
+.status {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+}
+
+.pendingStatus {
+    background: #ffe9cc;
+    color: #e67e22;
+}
+
+.approvedStatus {
+    background: #d4edda;
+    color: #155724;
+}
+
+.rejectedStatus {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .leaveTable {
+        font-size: 14px;
+    }
+    
+    .leaveTable th, 
+    .leaveTable td {
+        padding: 10px;
+    }
+}
+

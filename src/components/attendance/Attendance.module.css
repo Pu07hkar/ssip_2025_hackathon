@@ -1,0 +1,117 @@
+/* 📌 Attendance Container */
+.attendanceContainer {
+  padding: 20px;
+  background-color: #f8f9fc; /* Light gray background */
+  border-radius: 8px;
+}
+
+/* 📌 Header */
+.attendanceContainer h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111c44; /* Dark Blue */
+  margin-bottom: 20px;
+}
+
+/* 📌 Cards Layout */
+.attendanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* 📌 Individual Card */
+.attendanceCard {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.attendanceCard:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* 📌 Card Headers */
+.attendanceCard h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 📌 Status Colors */
+.attendanceCard:nth-child(1) { /* Login/Logout */
+  border-left: 5px solid #2d5be3; /* Blue */
+}
+
+.attendanceCard:nth-child(2) { /* GPS */
+  border-left: 5px solid #2dbe60; /* Green */
+}
+
+.attendanceCard:nth-child(3) { /* Total Hours */
+  border-left: 5px solid #ff9900; /* Yellow */
+}
+
+/* 📌 Buttons */
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  background-color: #2d5be3;
+  color: white;
+  font-weight: 500;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+  min-width: 120px;
+}
+
+.buttons button:disabled {
+  background-color: #b0c4de; /* Light blue-gray for disabled buttons */
+  cursor: not-allowed;
+}
+
+.buttons button:hover:not(:disabled) {
+  background-color: #1d4cb5; /* Darker Blue */
+}
+
+/* 📌 Camera Capture Box */
+.cameraContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 📌 Warning Message */
+.warningMessage {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 768px) {
+  .attendanceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
+

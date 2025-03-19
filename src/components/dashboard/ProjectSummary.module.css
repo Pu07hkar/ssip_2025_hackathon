@@ -1,0 +1,113 @@
+.projectSummary {
+    background-color: #f9fafb;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .cardContainer {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .bigCircleCard {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 180px;
+    height: 180px;
+    border: 10px solid #2563eb;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .circle h1 {
+    font-size: 42px;
+    color: #2563eb;
+  }
+  
+  .circle p {
+    margin-top: 5px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .detailsGrid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .detailCard {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+  }
+  
+  .detailCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .detailCard p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  
+  .detailCard h3 {
+    font-size: 26px;
+    margin: 0;
+  }
+  
+  .completed {
+    border-left: 6px solid #facc15;
+  }
+  
+  .inProcess {
+    border-left: 6px solid #fb923c;
+  }
+  
+  .pending {
+    border-left: 6px solid #f43f5e;
+  }
+  
+  .teamsAssigned {
+    border-left: 6px solid #34d399;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cardContainer {
+      flex-direction: column;
+    }
+  
+    .detailsGrid {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+  }
+  
