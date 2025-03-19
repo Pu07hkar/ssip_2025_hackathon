@@ -31,7 +31,7 @@ const WorkingHours = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={styles.workingCard}>
       <div className={styles.header}>
         <h3>Working Hours</h3>
         <select
@@ -45,6 +45,7 @@ const WorkingHours = () => {
           <option value="yearly">Yearly</option>
         </select>
       </div>
+
       <div className={styles.chartBox}>
         <ResponsiveContainer width="100%" height={360}>
           <PieChart>
@@ -54,7 +55,7 @@ const WorkingHours = () => {
               cx="50%"
               cy="50%"
               outerRadius={100}
-              innerRadius={60} // this makes it a donut
+              innerRadius={60}
               label
             >
               {data.map((entry, index) => (
@@ -62,20 +63,16 @@ const WorkingHours = () => {
               ))}
             </Pie>
             <Tooltip />
-            <Legend />
+          
           </PieChart>
         </ResponsiveContainer>
-
-     
-  
-  <div className="card">
-    <WorkingHours />
-  </div>
-
-
-
-
       </div>
+
+      <div className={styles.legend}>
+        <span style={{ color: "#4CAF50" }}>● Worked</span> &nbsp;
+        <span style={{ color: "#f44336" }}>● Pending</span>
+      </div>
+
       <div className={styles.textBox}>
         <p>
           Worked: <strong>{worked} hours</strong> out of <strong>{total} hrs</strong>

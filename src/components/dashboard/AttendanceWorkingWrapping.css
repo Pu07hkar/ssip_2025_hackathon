@@ -1,45 +1,49 @@
 .attendanceWorkWrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .dropdown {
-    padding: 6px 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-  
-  .chartBox {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  
-  .textBox {
-    text-align: center;
-    margin-top: 15px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px 18px; /* reduce padding a bit */
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px; /* Add slight spacing control */
+}
+
+.dropdown {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.chartBox {
+  width: 100%;
+  max-width: 250px; /* reduce chart size */
+  margin: 0 auto;
+}
+
+.textBox {
+  text-align: center;
+  margin-top: 10px; /* reduce text spacing */
+}
+
+.legend {
+  margin-top: 5px; /* reduce legend space if present */
+}

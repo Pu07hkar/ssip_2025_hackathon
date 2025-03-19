@@ -1,4 +1,4 @@
-.card {
+.workingCard {
   background: #fff;
   border-radius: 12px;
   padding: 20px;
@@ -8,6 +8,7 @@
   align-items: center;
   width: 100%;
 }
+
 
 .header {
   width: 100%;
@@ -20,4 +21,23 @@
   padding: 6px 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
 }
+
+.chartBox {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.legend {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.textBox {
+  margin-top: 20px;
+  text-align: center;
+}
+

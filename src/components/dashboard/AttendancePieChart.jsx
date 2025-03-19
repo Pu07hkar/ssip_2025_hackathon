@@ -55,11 +55,8 @@ const AttendancePieChart = () => {
         </PieChart>
       </ResponsiveContainer>
 
-
       <div className="attendanceWorkWrapper">
         <div className="card">
-          <div/>
-          <AttendancePieChart />
           <p className={styles.todayMark}>
             Attendance marked for today: <br />
             <strong>{today}</strong>
@@ -71,4 +68,3 @@ const AttendancePieChart = () => {
 };
 
 export default AttendancePieChart;
-
