@@ -77,14 +77,6 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
-        <div className={styles.searchBar}>
-          <input
-            type="text"
-            placeholder="Search..."
-            className={styles.searchInput}
-          />
-        </div>
-
         <div className={styles.headerRight}>
           <div className={styles.notificationWrapper} ref={notificationRef}>
             <button
@@ -108,9 +100,7 @@ const Header = () => {
                   {notifications.map((notification) => (
                     <div
                       key={notification.id}
-                      className={`${styles.notificationItem} ${
-                        !notification.read ? styles.unread : ''
-                      }`}
+                      className={`${styles.notificationItem} ${!notification.read ? styles.unread : ''}`}
                     >
                       <h4 className={styles.notificationItemTitle}>
                         {notification.title}

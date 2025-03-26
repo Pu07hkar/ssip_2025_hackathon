@@ -6,7 +6,8 @@ import {
   AiOutlineTeam,
   AiOutlineFileText,
   AiOutlineDollarCircle,
-  AiOutlineCalendar,  // ✅ Added Leave Icon
+  AiOutlineCalendar,
+  AiOutlineUser, // ✅ Added Employee Icon
   AiOutlineLeft,
   AiOutlineRight
 } from 'react-icons/ai';
@@ -17,12 +18,12 @@ const Sidebar = ({ onCollapse }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const menuItems = [
-    { title: 'Dashboard', path: '/', icon: AiOutlineHome },
+    { title: 'Dashboard', path: '/dashboard', icon: AiOutlineHome },
     { title: 'Attendance', path: '/attendance', icon: AiOutlineTeam },
     { title: 'Reports', path: '/reports', icon: AiOutlineFileText },
     { title: 'Payroll', path: '/payroll', icon: AiOutlineDollarCircle },
-    { title: 'Leave', path: '/leave', icon: AiOutlineCalendar } 
-    
+    { title: 'Leave', path: '/leave', icon: AiOutlineCalendar },
+    { title: 'Employee', path: '/employee', icon: AiOutlineUser } // ✅ Added Employee Page
   ];
 
   const toggleSidebar = () => {
@@ -70,6 +71,3 @@ Sidebar.propTypes = {
 };
 
 export default Sidebar;
-
-
-

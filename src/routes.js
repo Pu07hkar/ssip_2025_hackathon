@@ -10,19 +10,20 @@ import { useAuth } from './context/AuthContext';
 import ProfilePage from './pages/Profile/Profile';
 import Leave from './components/leave/leave';
 import Payroll from './components/payroll/Payroll';
+import EmployeePage from './pages/EmployeePage';
+import ChatPage from './pages/ChatPage';  // ✅ Import Chat Page
+import EmployeeDetailPage from './pages/EmployeeDetailPage';
 
 const AppRoutes = () => {
   const { isAuthenticated } = useAuth();
 
   return (
     <Routes>
-      {/* Redirect based on authentication */}
       <Route 
         path="/" 
         element={isAuthenticated() ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />} 
       />
       
-      {/* Authentication Routes */}
       <Route 
         path="/login" 
         element={isAuthenticated() ? <Navigate to="/dashboard" replace /> : <Login />} 
@@ -32,65 +33,24 @@ const AppRoutes = () => {
         element={isAuthenticated() ? <Navigate to="/dashboard" replace /> : <Register />} 
       />
 
-      {/* Protected Routes */}
+      <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      <Route path="/attendance" element={<ProtectedRoute><Attendance /></ProtectedRoute>} />
+      <Route path="/reports" element={<ProtectedRoute><Reports /></ProtectedRoute>} />
+      <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+      <Route path="/leave" element={<ProtectedRoute><Leave /></ProtectedRoute>} />
+      <Route path="/payroll" element={<ProtectedRoute><Payroll /></ProtectedRoute>} />
+      <Route path="/employee" element={<ProtectedRoute><EmployeePage /></ProtectedRoute>} />
       <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-      
-      <Route
-        path="/attendance"
-        element={
-          <ProtectedRoute>
-            <Attendance />
-          </ProtectedRoute>
-        }
-      />
-      
-      <Route
-        path="/reports"
-        element={
-          <ProtectedRoute>
-            <Reports />
-          </ProtectedRoute>
-        }
-      />
-      
-      <Route
-        path="/profile"
-        element={
-          <ProtectedRoute>
-            <ProfilePage />
-          </ProtectedRoute>
-        }
-      />
-
-<Route
-  path="/leave"
+  path="/employee/:id"
   element={
     <ProtectedRoute>
-      <Leave />
+      <EmployeeDetailPage />
     </ProtectedRoute>
   }
 />
+      {/* ✅ Add Chat Page Route */}
+      <Route path="/chat/:id" element={<ProtectedRoute><ChatPage /></ProtectedRoute>} />  
 
-
-<Route
-  path="/payroll"
-  element={
-    <ProtectedRoute>
-      <Payroll />
-    </ProtectedRoute>
-  }
-/>
-
-
-
-      {/* Fallback Route for Undefined Paths */}
       <Route 
         path="*" 
         element={<Navigate to={isAuthenticated() ? "/dashboard" : "/login"} replace />} 
